@@ -6,6 +6,18 @@
   font-family: 'Product Sans';
 }
 
+h3, p {
+  margin: 0; padding: 0;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body {
   margin: 0;
   background: white;
@@ -63,8 +75,7 @@ body {
   padding: var(--main-padding);
   margin: 15px 0 0 0;
   box-shadow: var(--main-box-shadow);
-  color: white;
-  background: var(--main-block-background);
+  border: 3px solid var(--main-block-background);
   border-radius: var(--main-border-radius)
 }
 
@@ -80,6 +91,25 @@ body {
   border-radius: 3px;
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.todo-item-position-changer {
+  color: var(--main-block-background);
+}
+
+.position-changer-right, .position-changer-left {
+  width: 20px;
+  background: white;
+  border-radius: 50px:
+}
+
+.todo-item-position-changer i {
+  margin: 0;
+  padding: 0;
+}
+
+.additional-data {
+  display: none;
 }
 
 .addTodoWindow {
