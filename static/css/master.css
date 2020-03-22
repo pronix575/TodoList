@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Product Sans';
+}
+
+* {
+  font-family: 'Product Sans';
+}
+
+body {
+  margin: 0;
+  background: white;
+  --main-text-color: white;
+  --main-block-background: #3f48cc;
+  --main-padding: 15px;
+  --main-margin: 15px 0 0 0;
+  --main-box-shadow: 0 4px 8px rgb(0,0,0,.2);
+  --main-border-radius: 10px;
+  padding: 0 0 15px 0;
+}
+
+.wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.menu {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  width: 150px;
+  padding: 10px;
+}
+
+.add-todo {
+  background: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: calc(var(--main-border-radius) - 3px);
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.app {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.todoItem {
+  padding: var(--main-padding);
+  margin: 15px 0 0 0;
+  box-shadow: var(--main-box-shadow);
+  color: white;
+  background: var(--main-block-background);
+  border-radius: var(--main-border-radius)
+}
+
+.todoItem h3, .todoItem p {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.deleteBtn {
+  background: white;
+  color: red;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.addTodoWindow {
+
+}
