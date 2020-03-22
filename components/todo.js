@@ -15,7 +15,7 @@ class TodoItem {
     const template = `
       <div class="todoItem" id="${this.id}">
         <div class="flex">
-          <h3 style="margin: 7px 0 0 0">${this.title}</h3>
+          <h3>${this.title}</h3>
 
           <div class="todo-item-position-changer flex">
             <div class="position-changer-left flex">
@@ -56,6 +56,7 @@ class TodoItem {
   }
 
   listen() {
+    //deleting
     $(`#deleteBtn${this.id}`).click(() => {
       this.delete()
     })

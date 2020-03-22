@@ -1,13 +1,13 @@
-const root = $('.app')
-const template = `
+let root = 'app'
+let template = `
   <div class="menu column">
   </div>
   <div class="start column">
     <div style="display: -webkit-flex;display: -ms-flex;display: flex; justify-content: space-between; -ms-align-items: center;align-items: center;">
       Todos
-      <div class="add-todo">
-        + add
-      </div>
+    </div>
+    <div class="add-todo">
+      + add
     </div>
   </div>
   <div class="in-progress column">
@@ -22,4 +22,4 @@ const template = `
   </div>
 `
 
-root.html(template)
+const todos = new View(root, template)

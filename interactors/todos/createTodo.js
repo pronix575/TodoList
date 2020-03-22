@@ -1,10 +1,19 @@
-const todoItems = []
-
 $(".add-todo").click(() => {
-  const todoItem = new TodoItem('hello', 'world')
+  const addTodoWindow = new AddTodoWindow();
+  addTodoWindow.render()
 
-  todoItems.push(todoItem)
+  const addTodoSaveBtn = $(getClassName('addTodoSaveBtn'))
 
-  todoItem.render()
-  todoItem.listen()
+  addTodoSaveBtn.click(() => {
+
+    let title = $(getIdName('addTodoTitle')),
+        text = $(getIdName('addTodoText'));
+
+    const todoItem = new TodoItem(title.val(), text.val())
+
+    todoItem.render()
+    addTodoWindow.remove()
+
+    todoItem.listen()
+  })
 })

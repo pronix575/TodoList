@@ -17,3 +17,8 @@ this.renderDel = (id) => {
 
   object.remove()
 }
+this.renderDelClass = (className) => {
+  let object = $(getClassName(className));
+
+  object.remove()
+}

@@ -47,16 +47,19 @@ body {
 }
 
 .add-todo {
-  background: blue;
+  background: var(--main-block-background);
   color: white;
-  padding: 5px 10px;
+  padding: 10px;
+  margin: 15px 0;
+  width: calc(100% - 20px);
+  max-height: 25px;
   border-radius: calc(var(--main-border-radius) - 3px);
   display: flex;
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .app {
@@ -68,11 +71,11 @@ body {
 
 .column {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 7.5px 0 0;
 }
 
 .todoItem {
-  padding: var(--main-padding);
+  padding: 10px;
   margin: 15px 0 0 0;
   box-shadow: var(--main-box-shadow);
   border: 3px solid var(--main-block-background);
@@ -81,7 +84,7 @@ body {
 
 .todoItem h3, .todoItem p {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0;
 }
 
 .deleteBtn {
@@ -113,5 +116,38 @@ body {
 }
 
 .addTodoWindow {
+  position: fixed;
+  width: 100%;
+  height: 95vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+}
 
+.addTodoForm {
+  width: 300px;
+  background: white;
+  padding: var(--main-padding);
+  border-radius: var(--main-border-radius);
+  box-shadow: var(--main-box-shadow);
+}
+
+.addTodoForm input {
+  margin: 15px 0 0 0;
+  border: 3px solid var(--main-block-background);
+  border-radius: var(--main-border-radius);
+  padding: 10px;
+  width: calc(100% - 25px);
+}
+
+.addTodoSaveBtn {
+  margin: 15px 0 0 0;
+  background: var(--main-block-background);
+  padding: 10px 25px;
+  max-width: 30px;
+  border-radius: var(--main-border-radius);
+  color: white;
 }
