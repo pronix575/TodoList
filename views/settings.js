@@ -1,5 +1,5 @@
 const settings = new View(
-  'app',
+  '.app',
 
   `
   <div class="settings-view flex" style="width: 1000px; height: 100vh">

@@ -19,8 +19,8 @@ const router = {
     applicationState.changeRoute()
 
     todos.render()
-    listenTodos()
-    
+    listenTodoCreateBtn()
+
     applicationState.todos.renderAll()
   }
 }

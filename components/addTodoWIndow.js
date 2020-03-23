@@ -1,4 +1,4 @@
-const addTodoWindow = new View('todos-view',
+const addTodoWindow = new View('.todos-view',
   `
     <div class="addTodoWindow">
       <form class="addTodoForm flex">

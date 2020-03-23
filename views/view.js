@@ -10,6 +10,6 @@ class View {
   }
 
   render() {
-    $(getClassName(this.root)).append(this.template)
+    $(this.root).append(this.template)
   }
 }

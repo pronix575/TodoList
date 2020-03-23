@@ -23,6 +23,7 @@ const scripts = [
   'components/addTodoWindow.js',
   'components/todo.js',
   'components/menu.js',
+  'components/backgroundImage.js',
 
   //interactors
   'interactors/todos/createTodo.js',

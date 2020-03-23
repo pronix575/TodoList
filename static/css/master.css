@@ -23,13 +23,32 @@ body {
   padding: 0;
   /* background: #ededed; */
   --main-text-color: white;
-  --main-block-background: #0053ec;
+  --main-block-background: #ff6200;
   --main-padding: 15px;
   --main-margin: 15px 0 0 0;
   --main-box-shadow: 0 4px 8px rgb(0,0,0,.2);
   --main-border-radius: 10px;
   --main-white: #f0f0f0;
   background: white;
+}
+
+.backgroundImg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: calc(25% - 15px) 75%;
+}
+
+.backgroundImg-content {
+  border-radius: 10px 0 0 0;
+  height: 100vh;
+  background: url("../../media/imgs/wallpaper-catalina.jpg");
+  background-clip: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .wrapper {
@@ -54,23 +73,15 @@ body {
   font-size: 15px;
 }
 
-.app {
-  background: white;
-}
-
 .todos-view {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  color: white;
 }
 
 .column {
   padding: 25px 0 0 0;
   margin-right: 15px;
-  background: white;
-}
-
-.menu {
-
 }
 
 .todoItem {
@@ -96,9 +107,10 @@ body {
   color: red;
   font-weight: bold;
   border-radius: 3px;
+  padding: 2px 5px;
   margin: 10px 0 0 0;
   cursor: pointer;
-  width: 30px;
+  max-width: 45px;
 }
 
 .todo-item-position-changer {
@@ -131,6 +143,7 @@ body {
 }
 
 .addTodoWindow {
+  color: black;
   background: rgb(0,0,0,.1);
   position: fixed;
   width: 100%;
@@ -183,6 +196,7 @@ body {
 .routerLink {
   width: calc(100% - 20px);
   padding: 10px;
+  box-shadow: var(--main-box-shadow);
   background: white;
   color: var(--main-block-background);
   margin: var(--main-margin);
@@ -194,7 +208,7 @@ body {
   position: fixed;
   margin: 0 10px 0 0;
   padding: 15px 15px 0 15px;
-  background: var(--main-white);
+  background: white;
   height: calc(100vh - 15px);
-  border-radius: 0 10px 0 0;
+  /* border-radius: 0 10px 0 0; */
 }

@@ -1,4 +1,4 @@
-const listenTodos = () => {
+const listenTodoCreateBtn = () => {
   $(".add-todo").click(() => {
 
     addTodoWindow.render()

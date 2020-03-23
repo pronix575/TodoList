@@ -1,4 +1,4 @@
-const todos = new View('app',
+const todos = new View('.app',
 `
   <div class="todos-view">
     <div>

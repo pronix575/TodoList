@@ -1,5 +1,5 @@
 const menu = new View(
-  'app',
+  '.app',
 
   `
     <div class="routerMenu">
