@@ -2,7 +2,13 @@ const applicationState = {
   currentRoute: '',
 
   todos: {
-    objects: []
+    objects: [],
+    renderAll() {
+      applicationState.todos.objects.forEach((item, i) => {
+        item.render()
+        item.listen()
+      });
+    }
   },
 
   changeRoute() {

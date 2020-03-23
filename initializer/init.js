@@ -26,6 +26,7 @@ const scripts = [
 
   //interactors
   'interactors/todos/createTodo.js',
+  'interactors/menuRouterInteractor.js',
 
   //presentor
   'presentor/presentor.js',

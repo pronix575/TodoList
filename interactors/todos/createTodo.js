@@ -16,12 +16,11 @@ const listenTodos = () => {
           text = $(getIdName('addTodoText'));
 
       const todoItem = new TodoItem(title.val(), text.val())
+      applicationState.todos.objects.push(todoItem)
 
       todoItem.render()
       addTodoWindow.remove()
       todoItem.listen()
-
-      applicationState.todos.objects.push(todoItem)
     })
   })
 }

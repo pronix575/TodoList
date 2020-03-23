@@ -20,5 +20,7 @@ const router = {
 
     todos.render()
     listenTodos()
+    
+    applicationState.todos.renderAll()
   }
 }
