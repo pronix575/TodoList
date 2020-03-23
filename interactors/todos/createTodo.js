@@ -1,6 +1,6 @@
 const listenTodos = () => {
   $(".add-todo").click(() => {
-    const addTodoWindow = new AddTodoWindow();
+
     addTodoWindow.render()
 
     const addTodoSaveBtn = $(getClassName('addTodoSaveBtn')),

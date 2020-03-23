@@ -11,21 +11,21 @@ const scripts = [
   //state
   'state/state.js',
 
-  //interactors
-  'interactors/todos/createTodo.js',
-
   //views
   'views/view.js',
   'views/todos.js',
   'views/settings.js',
 
-  //components
-  'components/todo.js',
-  'components/addTodoWindow.js',
-  'components/menu.js',
-
   //routes
   'router/router.js',
+
+  //components
+  'components/addTodoWindow.js',
+  'components/todo.js',
+  'components/menu.js',
+
+  //interactors
+  'interactors/todos/createTodo.js',
 
   //presentor
   'presentor/presentor.js',

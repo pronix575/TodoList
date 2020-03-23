@@ -1,14 +1,24 @@
 const router = {
-  renderSettingsView() {
-   todos.remove()
-   settings.remove()
-   settings.render()
- },
+  routes: [
+    'todos',
+    'settings',
+    'analitics',
+  ],
 
- renderTodosView() {
-   settings.remove()
-   todos.remove()
-   todos.render()
-   listenTodos()
- }
+  renderSettingsView() {
+    applicationState.currentRoute = 'Settings'
+
+    applicationState.changeRoute()
+
+    settings.render()
+  },
+
+  renderTodosView() {
+    applicationState.currentRoute = 'Todos'
+
+    applicationState.changeRoute()
+
+    todos.render()
+    listenTodos()
+  }
 }

@@ -1,7 +1,6 @@
 class View {
   constructor(root, template, container) {
     this.root = root;
-    this.rootObj = $(getClassName(root));
     this.template = template;
     this.container = container;
   }
@@ -11,6 +10,6 @@ class View {
   }
 
   render() {
-    this.rootObj.append(this.template)
+    $(getClassName(this.root)).append(this.template)
   }
 }

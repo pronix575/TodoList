@@ -1,3 +1,12 @@
 const applicationState = {
-  currentRoute: ''
+  currentRoute: '',
+
+  todos: {
+    objects: []
+  },
+
+  changeRoute() {
+    settings.remove()
+    todos.remove()
+  }
 }
