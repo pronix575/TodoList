@@ -34,5 +34,5 @@ const scripts = [
 ]
 
 scripts.forEach((item, i) => {
-  init(item)
+  init('src/' + item)
 });

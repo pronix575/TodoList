@@ -38,7 +38,7 @@ body {
   height: 100vh;
   z-index: -1;
   display: grid;
-  grid-template-columns: calc(25% - 15px) 75%;
+  grid-template-columns: calc(25% - 15px) calc(75% + 15px);
 }
 
 .backgroundImg-content {
@@ -90,7 +90,9 @@ body {
   /* box-shadow: var(--main-box-shadow); */
   cursor: pointer;
   border: 3px solid var(--main-block-background);
-  border-radius: var(--main-border-radius)
+  border-radius: var(--main-border-radius);
+  backdrop-filter: blur(4px);
+  background: rgb(0,0,0,.3);
 }
 
 .todoItem h3 {
