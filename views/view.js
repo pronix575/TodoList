@@ -1,12 +1,16 @@
 class View {
-  constructor(root, template) {
+  constructor(root, template, container) {
     this.root = root;
+    this.rootObj = $(getClassName(root));
     this.template = template;
+    this.container = container;
+  }
+
+  remove() {
+    renderDelClass(this.container)
   }
 
   render() {
-    let root = $(getClassName(this.root))
-
-    root.html(this.template)
+    this.rootObj.append(this.template)
   }
 }

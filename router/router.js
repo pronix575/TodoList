@@ -1,6 +1,14 @@
-const appState = {
-  currentView: ''
-}
+const router = {
+  renderSettingsView() {
+   todos.remove()
+   settings.remove()
+   settings.render()
+ },
 
-appState.currentView = 'Todos'
-todos.render()
+ renderTodosView() {
+   settings.remove()
+   todos.remove()
+   todos.render()
+   listenTodos()
+ }
+}

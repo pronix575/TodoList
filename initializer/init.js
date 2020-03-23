@@ -8,19 +8,27 @@ const scripts = [
   //render engine
   'scripts/render.js',
 
-  //components
-  'components/todo.js',
-  'components/addTodoWindow.js',
+  //state
+  'state/state.js',
+
+  //interactors
+  'interactors/todos/createTodo.js',
 
   //views
   'views/view.js',
   'views/todos.js',
+  'views/settings.js',
+
+  //components
+  'components/todo.js',
+  'components/addTodoWindow.js',
+  'components/menu.js',
 
   //routes
   'router/router.js',
 
-  //interactors
-  'interactors/todos/createTodo.js',
+  //presentor
+  'presentor/presentor.js',
 ]
 
 scripts.forEach((item, i) => {

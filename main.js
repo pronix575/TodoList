@@ -7,12 +7,14 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1000,
     height: 640,
+    minWidth: 950,
+    minHeight: 380,
     icon: __dirname + '/media/imgs/logo.png'
   })
 
   win.removeMenu();
   win.loadFile('index.html');
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow)

@@ -1,19 +1,27 @@
-$(".add-todo").click(() => {
-  const addTodoWindow = new AddTodoWindow();
-  addTodoWindow.render()
+const listenTodos = () => {
+  $(".add-todo").click(() => {
+    const addTodoWindow = new AddTodoWindow();
+    addTodoWindow.render()
 
-  const addTodoSaveBtn = $(getClassName('addTodoSaveBtn'))
+    const addTodoSaveBtn = $(getClassName('addTodoSaveBtn')),
+          closeAddTodoWindow = $(getClassName('closeAddTodoWindow'));
 
-  addTodoSaveBtn.click(() => {
+    closeAddTodoWindow.click(() => {
+      addTodoWindow.remove()
+    })
 
-    let title = $(getIdName('addTodoTitle')),
-        text = $(getIdName('addTodoText'));
+    addTodoSaveBtn.click(() => {
 
-    const todoItem = new TodoItem(title.val(), text.val())
+      let title = $(getIdName('addTodoTitle')),
+          text = $(getIdName('addTodoText'));
 
-    todoItem.render()
-    addTodoWindow.remove()
+      const todoItem = new TodoItem(title.val(), text.val())
 
-    todoItem.listen()
+      todoItem.render()
+      addTodoWindow.remove()
+      todoItem.listen()
+
+      applicationState.todos.objects.push(todoItem)
+    })
   })
-})
+}

@@ -1,10 +1,6 @@
-this.getClassName = (name) => {
-  return `.${name}`
-}
+this.getClassName = (name) => `.${name}`;
 
-this.getIdName = (name) => {
-  return `#${name}`
-}
+this.getIdName = (name) => `#${name}`;
 
 this.renderAdd = (container, data) => {
   let object = $(getClassName(container));
@@ -17,8 +13,11 @@ this.renderDel = (id) => {
 
   object.remove()
 }
+
 this.renderDelClass = (className) => {
   let object = $(getClassName(className));
 
   object.remove()
 }
+
+this.getRandomInt = (min, max) => Math.floor(Math.random() * Math.floor(max)) + min;
