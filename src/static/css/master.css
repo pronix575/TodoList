@@ -213,10 +213,19 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.routerLink:hover {
+  background: var(--main-white);
 }
 
 .routerLink-active {
   box-shadow: var(--main-box-shadow);
+}
+
+.routerLink-active:hover {
+  background: white;
 }
 
 .routerMenu {
