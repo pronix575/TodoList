@@ -75,7 +75,7 @@ body {
 }
 
 .add-todo:hover {
-  background: #1c68ff;
+
 }
 
 .todos-view {
@@ -132,6 +132,12 @@ body {
   width: 20px;
   height: 20px;
   font-size: 13px;
+  transition: 0.2s;
+}
+
+.deleteBtn:hover {
+  background: white;
+  color: red;
 }
 
 .todo-item-position-changer {
@@ -212,6 +218,14 @@ body {
   border-radius: 50%;
   justify-content: center;
   font-size: 13px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.closeAddTodoWindow:hover {
+  background: none;
+  color: red;
+  font-size: 18px;
 }
 
 .routerLink {
