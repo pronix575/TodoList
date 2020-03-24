@@ -15,6 +15,7 @@ const scripts = [
   'views/view.js',
   'views/todos.js',
   'views/settings.js',
+  'views/dashboard.js',
 
   //routes
   'router/router.js',

@@ -6,4 +6,8 @@ menu.listenMenu = () => {
   $('.routerLink-settings').click(() => {
     router.renderSettingsView()
   })
+
+  $('.routerLink-dashboard').click(() => {
+    router.renderDashboardView()
+  })
 }
