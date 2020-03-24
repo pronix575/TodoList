@@ -6,37 +6,38 @@ const init = (url) => {
 
 const scripts = [
   //render engine
-  'scripts/render.js',
+  'scripts/scripts',
 
   //dataStore
-  'dataStore/store.js',
+  'dataStore/store',
 
   //views
-  'views/view.js',
-  'views/todos.js',
-  'views/settings.js',
-  'views/dashboard.js',
+  'views/view',
+  'views/todos',
+  'views/settings',
+  'views/dashboard',
 
   //routes
-  'router/router.js',
+  'router/router',
 
   //components
-  'components/addTodoWindow.js',
-  'components/todo.js',
-  'components/menu.js',
-  'components/backgroundImage.js',
+  'components/todos/addTodoWindow',
+  'components/todos/todoItem',
+  'components/app/menu',
+  'components/app/backgroundImage',
 
   //state
-  'state/state.js',
+  'state/state',
+  'state/appStateInitialize',
 
   //interactors
-  'interactors/todos/createTodo.js',
-  'interactors/menuRouterInteractor.js',
+  'interactors/todos/createTodo',
+  'interactors/app/menuRouterInteractor',
 
   //presentor
-  'presentor/presentor.js',
+  'presentor/presentor',
 ]
 
 scripts.forEach((item, i) => {
-  init('src/' + item)
+  init(`src/${item}.js`)
 });

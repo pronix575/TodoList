@@ -1,5 +1,5 @@
 class TodoItem {
-  constructor(title, description, id, position, is_open) {
+  constructor(title, description, id, position, is_open, date) {
     this.id = id || Date.now();
     this.title = title;
     this.description = description;
@@ -7,13 +7,16 @@ class TodoItem {
       position: position || 'start',
       is_open: is_open || false,
     };
-    this.createdDate = new Date();
+
+    let createdDate = (new Date(date) == 'Invalid Date') ? (false) : new Date(date)
+
+    this.createdDate = createdDate || new Date();
   }
 
   render() {
-    const container = $(getClassName(this.state.position));
+    let container = $(getClassName(this.state.position));
 
-    const template = `
+    let template = `
       <div class="todoItem" id="${this.id}">
         <div class="flex" style="align-items: none">
           <h3>${this.title}</h3>
@@ -35,7 +38,10 @@ class TodoItem {
         </div>
         <div class="additional-data" id="additional-data${this.id}">
           <p>${this.description}</p>
-          <div class="deleteBtn" id="deleteBtn${this.id}">delete</div>
+          <div class="flex" style="margin: 5px 0 0 0">
+            <div class="deleteBtn flex" id="deleteBtn${this.id}"><i class="fa fa-trash-o"></i></div>
+            <p class="todoItemDate">${this.createdDate.toDateString()}</p>
+          </div>
         </div>
       </div>
     `

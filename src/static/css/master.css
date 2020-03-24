@@ -98,11 +98,12 @@ body {
   border-radius: var(--main-border-radius);
   backdrop-filter: blur(4px);
   background: rgb(0,0,0,.3);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .todoItem:hover {
   box-shadow: var(--main-box-shadow);
+  background: rgb(0,0,0,.4);
 }
 
 .todoItem h3 {
@@ -114,15 +115,23 @@ body {
   margin: 10px 0 0 0;
 }
 
+.todoItemDate {
+  font-size: 13px;
+  margin: 0;
+  color: #dadada;
+}
+
 .deleteBtn {
-  background: white;
-  color: red;
-  font-weight: bold;
-  border-radius: 3px;
-  padding: 2px 5px;
+  background: red;
+  color: white;
+  /* font-weight: bold; */
+  justify-content: center;
+  border-radius: 50%;
   margin: 10px 0 0 0;
   cursor: pointer;
-  max-width: 45px;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
 }
 
 .todo-item-position-changer {
