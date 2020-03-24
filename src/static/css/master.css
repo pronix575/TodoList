@@ -44,7 +44,7 @@ body {
 .backgroundImg-content {
   border-radius: 10px 0 0 0;
   height: 100vh;
-  background: url("../../media/imgs/wallpaper-catalina.jpg");
+  /*background-image: url("../../media/imgs/wallpaper-catalina.jpg");*/
   background-clip: border-box;
   background-size: cover;
   background-repeat: no-repeat;
@@ -212,6 +212,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .routerLink-active {

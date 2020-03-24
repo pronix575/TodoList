@@ -28,5 +28,13 @@ const router = {
     listenTodoCreateBtn()
 
     applicationState.todos.renderAll()
+  },
+
+  renderDashboardView() {
+    applicationState.currentRoute = 'Dashboard'
+
+    applicationState.changeRoute()
+
+    dashboard.render()
   }
 }
