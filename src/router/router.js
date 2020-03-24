@@ -8,8 +8,7 @@ const router = {
   renderSettingsView() {
     applicationState.currentRoute = 'Settings'
 
-    $('.routerLink-todos').attr({"class": "routerLink routerLink-todos"})
-    $('.routerLink-settings').attr("class", "routerLink routerLink-active routerLink-settings")
+    changeActiveRouterLink('settings')
 
     applicationState.changeRoute()
 
@@ -19,8 +18,7 @@ const router = {
   renderTodosView() {
     applicationState.currentRoute = 'Todos'
 
-    $('.routerLink-settings').attr({"class": "routerLink routerLink-settings"})
-    $('.routerLink-todos').attr({"class": "routerLink routerLink-active routerLink-todos"})
+    changeActiveRouterLink('todos')
 
     applicationState.changeRoute()
 
@@ -32,6 +30,8 @@ const router = {
 
   renderDashboardView() {
     applicationState.currentRoute = 'Dashboard'
+
+    changeActiveRouterLink('dashboard')
 
     applicationState.changeRoute()
 

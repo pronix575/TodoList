@@ -3,6 +3,7 @@ const { app, BrowserWindow } = require('electron'),
       url = require('url');
 
 
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 1000,
@@ -16,6 +17,8 @@ const createWindow = () => {
   win.loadFile('index.html');
   //debuging
   //win.webContents.openDevTools();
+
+
 }
 
 app.whenReady().then(createWindow)
