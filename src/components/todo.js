@@ -1,11 +1,11 @@
 class TodoItem {
-  constructor(title, description) {
-    this.id = Date.now();
+  constructor(title, description, id, position, is_open) {
+    this.id = id || Date.now();
     this.title = title;
     this.description = description;
     this.state = {
-      position: 'start',
-      is_open: false,
+      position: position || 'start',
+      is_open: is_open || false,
     };
     this.createdDate = new Date();
   }
@@ -53,6 +53,8 @@ class TodoItem {
     renderDel(this.id)
     this.render()
     this.listen()
+
+    appDataStore.set(applicationState)
   }
 
   to_left() {
@@ -60,6 +62,8 @@ class TodoItem {
     renderDel(this.id)
     this.render()
     this.listen()
+
+    appDataStore.set(applicationState)
   }
 
   delete() {
@@ -75,6 +79,8 @@ class TodoItem {
     })
 
     this.state.is_open = (this.state.is_open) ? false : true;
+
+    appDataStore.set(applicationState)
   }
 
   listen() {

@@ -13,7 +13,6 @@
     "electron": "^8.1.1"
   },
   "dependencies": {
-    "electron-store": "^5.1.1",
-    "nodemon": "^2.0.2"
+    "electron-store": "^5.1.1"
   }
 }

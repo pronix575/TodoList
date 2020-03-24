@@ -18,6 +18,8 @@ const listenTodoCreateBtn = () => {
       const todoItem = new TodoItem(title.val(), text.val())
       applicationState.todos.objects.push(todoItem)
 
+      appDataStore.set(applicationState)
+
       todoItem.render()
       addTodoWindow.remove()
       todoItem.listen()

@@ -1,40 +1,35 @@
 const router = {
-  routes: [
-    'todos',
-    'settings',
-    'analitics',
-  ],
 
   renderSettingsView() {
-    applicationState.currentRoute = 'Settings'
+    applicationState.currentRoute = 'settings'
 
-    changeActiveRouterLink('settings')
-
-    applicationState.changeRoute()
+    applicationState.changeRoute('settings')
 
     settings.render()
+
+    appDataStore.set(applicationState)
   },
 
   renderTodosView() {
-    applicationState.currentRoute = 'Todos'
+    applicationState.currentRoute = 'todos'
 
-    changeActiveRouterLink('todos')
-
-    applicationState.changeRoute()
+    applicationState.changeRoute('todos')
 
     todos.render()
     listenTodoCreateBtn()
 
     applicationState.todos.renderAll()
+
+    appDataStore.set(applicationState)
   },
 
   renderDashboardView() {
-    applicationState.currentRoute = 'Dashboard'
+    applicationState.currentRoute = 'dashboard'
 
-    changeActiveRouterLink('dashboard')
-
-    applicationState.changeRoute()
+    applicationState.changeRoute('dashboard')
 
     dashboard.render()
+
+    appDataStore.set(applicationState)
   }
 }

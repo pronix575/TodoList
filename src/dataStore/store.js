@@ -1,5 +1,11 @@
-const Store = require('electron-store')
+const appDataStore = {
+  key: 'appState',
 
-const todoSchema = {
-  
+  set(data) {
+    localStorage.setItem(appDataStore.key, JSON.stringify(data))
+  },
+
+  get() {
+    return JSON.parse(localStorage.getItem(appDataStore.key))
+  },
 }

@@ -8,8 +8,8 @@ const scripts = [
   //render engine
   'scripts/render.js',
 
-  //state
-  'state/state.js',
+  //dataStore
+  'dataStore/store.js',
 
   //views
   'views/view.js',
@@ -25,6 +25,9 @@ const scripts = [
   'components/todo.js',
   'components/menu.js',
   'components/backgroundImage.js',
+
+  //state
+  'state/state.js',
 
   //interactors
   'interactors/todos/createTodo.js',
