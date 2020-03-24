@@ -8,6 +8,13 @@ const applicationState = {
         item.render()
         item.listen()
       });
+    },
+    removeObj(id) {
+      applicationState.todos.objects.forEach((item, i) => {
+        if (item.id == id) {
+          delete applicationState.todos.objects[i]
+        }
+      });
     }
   },
 

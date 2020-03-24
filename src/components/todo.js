@@ -63,6 +63,7 @@ class TodoItem {
   }
 
   delete() {
+    applicationState.todos.removeObj(this.id)
     renderDel(this.id)
   }
 
