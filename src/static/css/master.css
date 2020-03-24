@@ -23,7 +23,7 @@ body {
   padding: 0;
   /* background: #ededed; */
   --main-text-color: white;
-  --main-block-background: #ff6200;
+  --main-block-background: #0055ff;
   --main-padding: 15px;
   --main-margin: 15px 0 0 0;
   --main-box-shadow: 0 4px 8px rgb(0,0,0,.2);
@@ -93,6 +93,11 @@ body {
   border-radius: var(--main-border-radius);
   backdrop-filter: blur(4px);
   background: rgb(0,0,0,.3);
+  transition: 0.4s;
+}
+
+.todoItem:hover {
+  box-shadow: var(--main-box-shadow);
 }
 
 .todoItem h3 {
@@ -198,11 +203,19 @@ body {
 .routerLink {
   width: calc(100% - 20px);
   padding: 10px;
-  box-shadow: var(--main-box-shadow);
-  background: white;
+  /* background: white; */
   color: var(--main-block-background);
   margin: var(--main-margin);
-  border-radius: var(--main-border-radius)
+  border-radius: var(--main-border-radius);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.routerLink-active {
+  box-shadow: var(--main-box-shadow);
 }
 
 .routerMenu {
@@ -213,4 +226,10 @@ body {
   background: white;
   height: calc(100vh - 15px);
   /* border-radius: 0 10px 0 0; */
+}
+
+.settings-view {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  color: white;
 }
