@@ -23,13 +23,18 @@ body {
   padding: 0;
   /* background: #ededed; */
   --main-text-color: white;
-  /* --main-block-background: #0055ff; */
+  --main-block-background: #0055ff;
   --main-padding: 15px;
   --main-margin: 15px 0 0 0;
-  --main-box-shadow: 0 4px 8px rgb(0,0,0,.2);
   --main-border-radius: 10px;
   --main-white: #f0f0f0;
-  background: white;
+  --main-theme-color: #ffffff;
+  --main-theme-font-color: white;
+  --main-box-shadow-color: rgb(0,0,0,.2);
+  --main-box-shadow: 0 5px 10px var(--main-box-shadow-color);
+  --main-nav-color: #f0f0f0;
+  background: var(--main-theme-color);
+  color: var(--main-theme-font-color);
 }
 
 .backgroundImg {
@@ -59,7 +64,7 @@ body {
 
 .add-todo {
   background: var(--main-block-background);
-  color: white;
+  color: var(--main-theme-color);
   padding: 11px;
   margin: 13px 0;
   width: calc(100% - 20px);
@@ -142,7 +147,7 @@ body {
 
 .todo-item-position-changer {
   color: white;
-  background: var(--main-block-background);
+  background: var(--main-theme-color);
   border-radius: calc(var(--main-border-radius) - 3px);
   height: 25px;
   justify-content: space-around;
@@ -170,7 +175,7 @@ body {
 }
 
 .addTodoWindow {
-  color: black;
+  color: var(--main-theme-font-color);
   background: rgb(0,0,0,.1);
   position: fixed;
   width: 100%;
@@ -186,7 +191,7 @@ body {
 
 .addTodoForm {
   width: 300px;
-  background: white;
+  background: var(--main-theme-color);
   padding: var(--main-padding);
   border-radius: var(--main-border-radius);
   box-shadow: var(--main-box-shadow);
@@ -194,10 +199,12 @@ body {
 
 .addTodoForm input {
   margin: 15px 0 0 0;
+  background: var(--main-theme-color);
   border: 3px solid var(--main-block-background);
   border-radius: var(--main-border-radius);
   padding: 10px;
   width: calc(100% - 25px);
+  color: var(--main-theme-font-color);
 }
 
 .addTodoSaveBtn {
@@ -206,8 +213,9 @@ body {
   padding: 10px 25px;
   max-width: 30px;
   border-radius: var(--main-border-radius);
-  color: white;
+  color: var(main-theme-font-color);
   cursor: pointer;
+  color: var(--main-theme-color);
 }
 
 .closeAddTodoWindow {
@@ -231,7 +239,7 @@ body {
 .routerLink {
   width: calc(100% - 20px);
   padding: 10px;
-  /* background: white; */
+  /* background: var(--main-theme-color); */
   color: var(--main-block-background);
   margin: var(--main-margin);
   border-radius: var(--main-border-radius);
@@ -245,15 +253,12 @@ body {
 }
 
 .routerLink:hover {
-  background: var(--main-white);
+  background: var(--main-nav-color);
 }
 
 .routerLink-active {
+  background: var(--main-nav-color);
   box-shadow: var(--main-box-shadow);
-}
-
-.routerLink-active:hover {
-  background: white;
 }
 
 .routerMenu {
@@ -261,7 +266,7 @@ body {
   position: fixed;
   margin: 0 10px 0 0;
   padding: 15px 15px 0 15px;
-  background: white;
+  background: var(--main-theme-color);
   height: calc(100vh - 15px);
   /* border-radius: 0 10px 0 0; */
 }
@@ -278,12 +283,13 @@ body {
 }
 
 .settings-container {
-  width: 300px;
+  width: 310px;
   padding: 15px;
   border-radius: var(--main-border-radius);
   /* border: 3px solid var(--main-block-background); */
-  background: white;
-  color: black;
+  background: var(--main-theme-color);
+  color: var(--main-theme-font-color);
+  backdrop-filter: blur(5px);
 }
 
 .colorChanger {
@@ -296,14 +302,18 @@ body {
 
 .colorChangerCircles {
   margin: 0 0 0 10px;
+  /* background: var(--main-async-color) ;
+  height: 100%;
+  padding: 10px;
+  border-radius: calc(var(--main-border-radius) - 2px); */
 }
 
 .colorChangerCircle {
+  border: 2px solid #262626;
   margin: 0 0 0 8px;
   width: 22px;
   height: 22px;
   background: var(--main-block-background);
-  border: 3px solid white;
   cursor: pointer;
   border-radius: 50%;
 }
