@@ -6,7 +6,7 @@ if (appData) {
 
   appData.todos.objects.forEach((item, i) => {
     if (item != null) {
-      let obj = new TodoItem(item.title, item.description, item.id, item.state.position, item.state.is_open)
+      let obj = new TodoItem(item.title, item.description, item.id, item.state.position, item.state.is_open, item.createdDate)
       applicationState.todos.objects.push(obj)
     }
   });
