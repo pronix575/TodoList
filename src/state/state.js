@@ -36,6 +36,7 @@ const applicationState = {
     backgroundColor: {
       link: 'colorChangerCircle-deepBlue',
       color: '#0055ff',
+      theme: 'white',
     },
     backgroundImg: {
       url: 'src/media/imgs/wallpaper-catalina.jpg',

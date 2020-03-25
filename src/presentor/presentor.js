@@ -10,6 +10,8 @@ const initializeApplication = () => {
     "--main-block-background": applicationState.settings.backgroundColor.color
   })
 
+  changeThemeColor(applicationState.settings.backgroundColor.theme)
+
   menu.render()
   menu.listenMenu()
 
