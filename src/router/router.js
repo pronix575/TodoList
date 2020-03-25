@@ -7,6 +7,12 @@ const router = {
 
     settings.render()
 
+    $(getIdName(applicationState.settings.backgroundColor.link)).attr({
+      "class": "colorChangerCircle colorChangerCircle-active"
+    })
+
+    listenSettingsChangeMainColor()
+
     appDataStore.set(applicationState)
   },
 

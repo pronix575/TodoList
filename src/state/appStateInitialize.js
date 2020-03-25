@@ -11,6 +11,8 @@ if (appData) {
     }
   });
 
+  applicationState.settings.backgroundColor = appData.settings.backgroundColor
+
 } else {
   appDataStore.set(applicationState)
 }

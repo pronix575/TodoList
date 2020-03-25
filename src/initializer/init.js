@@ -33,6 +33,7 @@ const scripts = [
   //interactors
   'interactors/todos/createTodo',
   'interactors/app/menuRouterInteractor',
+  'interactors/settings/colorChanger',
 
   //presentor
   'presentor/presentor',

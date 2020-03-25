@@ -33,6 +33,10 @@ const applicationState = {
   },
 
   settings: {
+    backgroundColor: {
+      link: 'colorChangerCircle-deepBlue',
+      color: '#0055ff',
+    },
     backgroundImg: {
       url: 'src/media/imgs/wallpaper-catalina.jpg',
     }

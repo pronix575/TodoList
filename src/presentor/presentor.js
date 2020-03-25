@@ -6,6 +6,10 @@ const initializeApplication = () => {
 	   "background-image": `url(${applicationState.settings.backgroundImg.url})`,
   })
 
+  $("body").css({
+    "--main-block-background": applicationState.settings.backgroundColor.color
+  })
+
   menu.render()
   menu.listenMenu()
 
