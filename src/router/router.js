@@ -12,6 +12,11 @@ const router = {
     })
 
     listenSettingsChangeMainColor()
+    listenChangeBackgroundImg()
+
+    $(`#wallpaper-${applicationState.settings.backgroundImg.link}`).attr({
+      "class": "wallpaperChangerItem wallpaperChangerItem-active"
+    })
 
     appDataStore.set(applicationState)
   },

@@ -11,18 +11,20 @@ const changeThemeColor = (theme) => {
         "--main-box-shadow:": "0 5px 10px var(--main-box-shadow-color)",
         "--main-nav-color": "rgb(0,0,0,.05)",
         "--main-async-color": "#808080",
+        "--main-router-link-color": "white",
       })
 
       break;
     case 'black':
 
       body.css({
-        "--main-theme-color": "#262626",
+        "--main-theme-color": "#181818",
         "--main-theme-font-color": "white",
         "--main-box-shadow-color:": "rgb(0,0,0,.2)",
         "--main-box-shadow:": "0 5px 10px var(--main-box-shadow-color)",
         "--main-nav-color": "rgb(0,0,0,.8)",
-        "--main-async-color": "808080",
+        "--main-async-color": "#808080",
+        "--main-router-link-color": "rgb(0,0,0,.8)",
       })
 
       break;

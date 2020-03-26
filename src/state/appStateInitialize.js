@@ -12,6 +12,8 @@ if (appData) {
   });
 
   applicationState.settings.backgroundColor = appData.settings.backgroundColor
+  applicationState.settings.backgroundImg.url = appData.settings.backgroundImg.url
+  applicationState.settings.backgroundImg.link = appData.settings.backgroundImg.link
 
 } else {
   appDataStore.set(applicationState)

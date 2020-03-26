@@ -25,6 +25,7 @@ const scripts = [
   'components/todos/todoItem',
   'components/app/menu',
   'components/app/backgroundImage',
+  'components/app/startWindow',
 
   //state
   'state/state',
@@ -34,6 +35,7 @@ const scripts = [
   'interactors/todos/createTodo',
   'interactors/app/menuRouterInteractor',
   'interactors/settings/colorChanger',
+  'interactors/settings/wallpaperChanger',
 
   //presentor
   'presentor/presentor',

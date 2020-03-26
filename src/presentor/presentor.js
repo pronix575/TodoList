@@ -1,14 +1,22 @@
 const initializeApplication = () => {
 
+  startWindow.render()
+
+  setTimeout(() => {
+    startWindow.remove()
+  }, 2000)
+
   backgroundImg.render()
 
   $(".backgroundImg-content").css({
-	   "background-image": `url(${applicationState.settings.backgroundImg.url})`,
+	   "background-image": applicationState.settings.backgroundImg.url,
   })
 
   $("body").css({
     "--main-block-background": applicationState.settings.backgroundColor.color
   })
+
+  console.log(`#wallpaper-${applicationState.settings.backgroundImg.link}`)
 
   changeThemeColor(applicationState.settings.backgroundColor.theme)
 

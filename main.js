@@ -14,7 +14,7 @@ const createWindow = () => {
   win.removeMenu();
   win.loadFile('index.html');
   //debuging
-  win.webContents.openDevTools();
+  //win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow)

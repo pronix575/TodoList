@@ -39,7 +39,8 @@ const applicationState = {
       theme: 'white',
     },
     backgroundImg: {
-      url: 'src/media/imgs/wallpaper-catalina.jpg',
+      link: 'catalina',
+      url: 'url(src/media/imgs/wallpaper-catalina.jpg)',
     }
   }
 }
