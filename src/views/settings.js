@@ -11,7 +11,7 @@ const settings = new View(
       <div class="settings-container">
 
         <div class="colorChanger flex">
-          <h3>Color theme</h3>
+          <h3>Theme color</h3>
 
           <div class="changeContainer flex">
             <div id="colorChangerCircle-black-f" class="colorChangerCircle" style="background: #ffffff"></div>

@@ -12,6 +12,12 @@ class TodoItem {
     this.createdDate = createdDate || new Date();
   }
 
+  getDate() {
+    let month = (this.createdDate.getMonth().toString().length == 1) ? ('0' + this.createdDate.getMonth().toString()) : this.createdDate.getMonth()
+
+    return `<span style="color: #f8f8f8">${this.createdDate.getHours()}:${this.createdDate.getMinutes()}</span> ${this.createdDate.getDate()}.${month}.${this.createdDate.getFullYear()}`
+  }
+
   render() {
     let container = $(getClassName(this.state.position));
     let template = `
@@ -37,8 +43,18 @@ class TodoItem {
         <div class="additional-data" id="additional-data${this.id}">
           <p>${this.description}</p>
           <div class="flex" style="margin: 5px 0 0 0">
-            <div class="deleteBtn flex" id="deleteBtn${this.id}"><i class="fa fa-trash-o"></i></div>
-            <p class="todoItemDate">${this.createdDate.getHours() + ":" + this.createdDate.getMinutes() + " " + this.createdDate.getDate() +  "." + this.createdDate.getMonth() + "." + this.createdDate.getYear()}</p>
+            
+            <div class="flex">
+              <div class="deleteBtn flex" id="deleteBtn${this.id}"><i class="fa fa-trash-o"></i></div>
+
+              <div style="width: 10px"></div>
+
+              <div class="editBtn flex" id="editBtn${this.id}"><i class="fa fa-edit"></i></div>
+            </div>
+            
+            <p class="todoItemDate">
+              ${this.getDate()}
+            </p>
           </div>
         </div>
       </div>

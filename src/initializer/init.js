@@ -23,6 +23,7 @@ const scripts = [
   //components
   'components/todos/addTodoWindow',
   'components/todos/todoItem',
+  'components/editTodo',
   'components/app/menu',
   'components/app/backgroundImage',
   'components/app/startWindow',
