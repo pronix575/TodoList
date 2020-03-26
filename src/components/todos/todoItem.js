@@ -9,13 +9,11 @@ class TodoItem {
     };
 
     let createdDate = (new Date(date) == 'Invalid Date') ? (false) : new Date(date)
-
     this.createdDate = createdDate || new Date();
   }
 
   render() {
     let container = $(getClassName(this.state.position));
-
     let template = `
       <div class="todoItem" id="${this.id}">
         <div class="flex" style="align-items: none">
@@ -40,7 +38,7 @@ class TodoItem {
           <p>${this.description}</p>
           <div class="flex" style="margin: 5px 0 0 0">
             <div class="deleteBtn flex" id="deleteBtn${this.id}"><i class="fa fa-trash-o"></i></div>
-            <p class="todoItemDate">${this.createdDate.toDateString()}</p>
+            <p class="todoItemDate">${this.createdDate.getHours() + ":" + this.createdDate.getMinutes() + " " + this.createdDate.getDate() +  "." + this.createdDate.getMonth() + "." + this.createdDate.getYear()}</p>
           </div>
         </div>
       </div>
