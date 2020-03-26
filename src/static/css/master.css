@@ -291,6 +291,9 @@ body {
   background: var(--main-theme-color);
   height: calc(100vh - 15px);
   /* border-radius: 0 10px 0 0; */
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
 }
 
 .settings-view {
@@ -419,4 +422,11 @@ body {
 .areYouShureFormNoBtn {
   margin: 10px 0 0 5px;
   background: var(--main-block-background);
+}
+
+.developedByIskanderKarimovStudio {
+  margin: 0 0 10px 0;
+  opacity: .6;
+  line-height: 22px;
+  font-size: 13px;
 }

@@ -8,7 +8,7 @@ const createWindow = () => {
     height: 640,
     minWidth: 950,
     minHeight: 380,
-    icon: __dirname + '/src/media/imgs/logo.png'
+    icon: __dirname + '/src/media/imgs/logo2.png'
   })
 
   win.removeMenu();
