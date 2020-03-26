@@ -23,7 +23,7 @@ const scripts = [
   //components
   'components/todos/addTodoWindow',
   'components/todos/todoItem',
-  'components/editTodo',
+  'components/todos/editTodoWindow',
   'components/app/menu',
   'components/app/backgroundImage',
   'components/app/startWindow',
@@ -37,6 +37,7 @@ const scripts = [
   'interactors/app/menuRouterInteractor',
   'interactors/settings/colorChanger',
   'interactors/settings/wallpaperChanger',
+  'interactors/todos/editTodo',
 
   //presentor
   'presentor/presentor',

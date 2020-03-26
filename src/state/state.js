@@ -3,6 +3,15 @@ const applicationState = {
 
   todos: {
     objects: [],
+
+    renderItem(id) {
+      applicationState.todos.objects.forEach((item, i) => {
+        if (item.id == id) {
+          applicationState.todos.objects[i].render()
+        }
+      });
+    },
+
     renderAll() {
       applicationState.todos.objects.forEach((item, i) => {
         item.render()
@@ -11,6 +20,7 @@ const applicationState = {
         appDataStore.set(applicationState)
       });
     },
+
     removeObj(id) {
       applicationState.todos.objects.forEach((item, i) => {
         if (item.id == id) {

@@ -17,9 +17,15 @@ const listenTodoCreateBtn = () => {
 
     addTodoWindow.render()
 
+    $(".addTodoWindow").keypress(function(eventObject){
+      if (eventObject.which == 13){
+        saveTodoItemEvent()
+      }
+    }); 
+
     const addTodoSaveBtn = $(getClassName('addTodoSaveBtn')),
           closeAddTodoWindow = $(getClassName('closeAddTodoWindow'));
-
+          
     closeAddTodoWindow.click(() => {
       addTodoWindow.remove()
     })
@@ -27,13 +33,6 @@ const listenTodoCreateBtn = () => {
     addTodoSaveBtn.click(() => {
       saveTodoItemEvent()
     }) 
-
-    $(".addTodoWindow").keypress(function(eventObject){
-      if (eventObject.which == 13){
-        saveTodoItemEvent()
-      }
-    }); 
-
   });  
 
 }

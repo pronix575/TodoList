@@ -91,6 +91,49 @@ class TodoItem {
     renderDel(this.id)
   }
 
+  remove() {
+    renderDel(this.id)
+  }
+
+  edit() {
+    editTodoWindow.render()
+
+    const editTodoSave = () => {
+      this.title = $("#editTodoTitle").val();
+      this.description = $("#editTodoText").val();
+
+      this.remove()
+      this.render()
+      this.listen()
+
+      editTodoWindow.remove()
+      
+      appDataStore.set(applicationState)
+    }
+
+    $("#editTodoTitle").val(this.title)
+    $("#editTodoText").val(this.description)
+
+    const editTodoSaveBtn = $(getClassName('editTodoSaveBtn')),
+      closeEditTodoWindow = $(getClassName('closeEditTodoWindow'));
+
+    closeEditTodoWindow.click(() => {
+      $("#editTodoTitle").val(this.title)
+      $("#editTodoText").val(this.description)
+      addTodoWindow.remove()
+    })
+
+    editTodoSaveBtn.click(() => {
+      editTodoSave()
+    })
+
+    $(".editTodoWindow").keypress(function(eventObject){
+      if (eventObject.which == 13){
+        editTodoSave()
+      }
+    });  
+  }
+
   interact() {
     let display_prop = (this.state.is_open) ? 'none' : 'block';
 
@@ -112,6 +155,10 @@ class TodoItem {
     //deleting
     $(`#deleteBtn${this.id}`).click(() => {
       this.delete()
+    })
+
+    $(`#editBtn${this.id}`).click(() => {
+      this.edit()
     })
 
     $(`#left${this.id}`).click(() => {
