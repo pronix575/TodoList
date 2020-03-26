@@ -1,8 +1,6 @@
 const router = {
 
   renderSettingsView() {
-    applicationState.currentRoute = 'settings'
-
     applicationState.changeRoute('settings')
 
     settings.render()
@@ -22,8 +20,6 @@ const router = {
   },
 
   renderTodosView() {
-    applicationState.currentRoute = 'todos'
-
     applicationState.changeRoute('todos')
 
     todos.render()
@@ -35,8 +31,6 @@ const router = {
   },
 
   renderDashboardView() {
-    applicationState.currentRoute = 'dashboard'
-
     applicationState.changeRoute('dashboard')
 
     dashboard.render()

@@ -154,7 +154,17 @@ class TodoItem {
 
     //deleting
     $(`#deleteBtn${this.id}`).click(() => {
-      this.delete()
+      areYouShureToDelete.render()
+
+      $(".areYouShureFormYesBtn").click(() => {
+        this.delete()
+        areYouShureToDelete.remove()
+      })
+      
+      $(".areYouShureFormNoBtn").click(() => {
+        areYouShureToDelete.remove()
+      })
+
     })
 
     $(`#editBtn${this.id}`).click(() => {

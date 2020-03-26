@@ -33,6 +33,8 @@ const applicationState = {
   },
 
   changeRoute(route) {
+    applicationState.currentRoute = route
+
     settings.remove()
     todos.remove()
     dashboard.remove()

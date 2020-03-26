@@ -22,6 +22,7 @@ body {
   margin: 0;
   padding: 0;
   /* background: #ededed; */
+  --main-settings-width: 450px;
   --main-text-color: white;
   --main-block-background: #0055ff;
   --main-padding: 15px;
@@ -305,7 +306,7 @@ body {
 
 .settings-container {
   margin: 0 0 15px 0;
-  width: 450px;
+  width: var(--main-settings-width);
   padding: 10px;
   border-radius: var(--main-border-radius);
   /* border: 3px solid var(--main-block-background); */
@@ -370,4 +371,52 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 10;
+}
+
+.dashboard-item {
+  padding: var(--main-padding);
+  border: 3px solid var(--main-block-background);
+  border-radius: var(--main-border-radius);
+  backdrop-filter: blur(4px);
+  background: rgb(0,0,0,.3);
+  width: var(--main-settings-width);
+}
+
+.areYouShureToDelete {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  background: rgb(0,0,0,0.1);
+}
+
+.areYouShureForm {
+  width: 200px;
+  /* height: 150px; */
+  background: var(--main-theme-color);
+  color: var(--main-theme-font-color);
+  border-radius: var(--main-border-radius);
+  padding: var(--main-padding);
+  
+}
+
+.areYouShureFormYesBtn, .areYouShureFormNoBtn {
+  justify-content: center;
+  background-color: var(--main-theme-font-color);
+  color: var(--main-theme-color);
+  border-radius: calc(var(--main-border-radius) - 2px);
+  margin-top: 10px;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}
+
+.areYouShureFormYesBtn {
+  margin: 10px 5px 0 0;
+}
+
+.areYouShureFormNoBtn {
+  margin: 10px 0 0 5px;
+  background: var(--main-block-background);
 }

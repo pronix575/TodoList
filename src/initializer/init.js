@@ -24,6 +24,7 @@ const scripts = [
   'components/todos/addTodoWindow',
   'components/todos/todoItem',
   'components/todos/editTodoWindow',
+  'components/todos/areYouShureToDelete',
   'components/app/menu',
   'components/app/backgroundImage',
   'components/app/startWindow',
@@ -37,7 +38,10 @@ const scripts = [
   'interactors/app/menuRouterInteractor',
   'interactors/settings/colorChanger',
   'interactors/settings/wallpaperChanger',
-  'interactors/todos/editTodo',
+
+  //decorators
+  'decorators/decorator',
+  'decorators/chartsEngine',
 
   //presentor
   'presentor/presentor',
