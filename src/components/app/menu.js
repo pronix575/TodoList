@@ -11,7 +11,9 @@ const menu = new View(
       </div>
       <div>
         <p class="developedByIskanderKarimovStudio">
-          <span style="opacity: .8">developed by</span> <br><span style="font-size: 17px; font-weight: bold">Iskander Karimov <span style="color: var(--main-block-background)">Studio</span></span>
+          <span style="opacity: .8">developed by</span> <br>
+          <span style="font-size: 17px; font-weight: bold">Iskander Karimov <span style="color: var(--main-block-background)">Studio</span></span> <br>
+          <span style="font-size: 17px; font-weight: bold">Rakhmatullin <span style="color: var(--main-block-background)">Industries</span></span>
         </p>
       </div>
     </div>

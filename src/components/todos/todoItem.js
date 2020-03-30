@@ -22,23 +22,24 @@ class TodoItem {
     let container = $(getClassName(this.state.position));
     let template = `
       <div class="todoItem" id="${this.id}">
-        <div class="flex" style="align-items: none">
-          <h3>${this.title}</h3>
+        <div class="flex short-description" style="align-items: none">
+          <div class="title">
+            <h3>${this.title}</h3>
+          </div>
 
-          <div class="flex" style="align-items: none; height: 100%;">
+          <div class="flex left-right-buttons" style="align-items: none; height: 100%;">
             <div class="todo-item-position-changer flex">
 
-                <div class="position-changer-left flex">
-                  <i class="fa fa-angle-left fa-lg" id="left${this.id}"></i>
+                <div class="position-changer-left flex" id="left${this.id}">
+                  <i class="fa fa-angle-left fa-lg"></i>
                 </div>
 
-                <div class="position-changer-right flex">
-                  <i class="fa fa-angle-right fa-lg" id="right${this.id}"></i>
+                <div class="position-changer-right flex" id="right${this.id}">
+                  <i class="fa fa-angle-right fa-lg"></i>
                 </div>
 
             </div>
           </div>
-
         </div>
         <div class="additional-data" id="additional-data${this.id}">
           <p>${this.description}</p>

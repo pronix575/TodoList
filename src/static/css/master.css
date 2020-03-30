@@ -48,7 +48,7 @@ body {
 }
 
 .backgroundImg-content {
-  border-radius: 10px 0 0 0;
+  /*border-radius: 10px 0 0 0;*/
   height: 100vh;
   /*background-image: url("../../media/imgs/wallpaper-catalina.jpg");*/
   background-clip: border-box;
@@ -105,6 +105,18 @@ body {
   backdrop-filter: blur(4px);
   background: rgb(0,0,0,.3);
   transition: 0.3s;
+}
+
+.short-description {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.title {
+  overflow-x: hidden;
 }
 
 .todoItem:hover {
@@ -168,12 +180,14 @@ body {
   background: var(--main-block-background);
   border-radius: calc(var(--main-border-radius) - 3px);
   height: 25px;
-  justify-content: space-around;
+  display: flex;
   min-width: 40px;
   margin: 0 0 0 10px;
 }
 
 .position-changer-right, .position-changer-left {
+  width: 50%;
+  height: 100%;
   border-radius: 50px;
   font-size: 15px;
   transition: .1s;
@@ -184,12 +198,14 @@ body {
 }
 
 .todo-item-position-changer i {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 .additional-data {
   display: none;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .addTodoWindow {
