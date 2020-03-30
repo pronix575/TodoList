@@ -40,7 +40,6 @@ const scripts = [
   'interactors/settings/wallpaperChanger',
 
   //decorators
-  'decorators/decorator',
   'decorators/chartsEngine',
 
   //presentor

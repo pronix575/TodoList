@@ -392,15 +392,6 @@ body {
   z-index: 10;
 }
 
-.dashboard-item {
-  padding: var(--main-padding);
-  border: 3px solid var(--main-block-background);
-  border-radius: var(--main-border-radius);
-  backdrop-filter: blur(4px);
-  background: rgb(0,0,0,.3);
-  width: var(--main-settings-width);
-}
-
 .areYouShureToDelete {
   position: fixed;
   width: 100%;
@@ -445,4 +436,19 @@ body {
   opacity: .6;
   line-height: 22px;
   font-size: 13px;
+}
+
+.dashboard-item {
+  padding: var(--main-padding);
+  border: 3px solid var(--main-block-background);
+  border-radius: var(--main-border-radius);
+  backdrop-filter: blur(4px);
+  background: rgb(0,0,0,.7);
+  width: var(--main-settings-width);
+}
+
+#dashboardActivityStatistic {
+  width: 100%;
+  margin: 15px 0 0 0;
+  height: 200px;
 }

@@ -1,18 +1,24 @@
 {
-  "name": "electron-app",
+  "name": "TodoList",
   "version": "1.0.0",
-  "description": "",
+  "description": "innovative todo list application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "nodemon electron ."
+    "dev": "nodemon electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "author": "pronix",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^8.1.1"
+    "electron": "^8.1.1",
+    "electron-builder": "^22.4.1"
   },
   "dependencies": {
     "electron-store": "^5.1.1"
+  },
+  "build": {
+    "icon": "src/media/imgs/logo2.png"
   }
 }

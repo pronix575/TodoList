@@ -21,3 +21,6 @@ this.renderDelClass = (className) => {
 }
 
 this.getRandomInt = (min, max) => Math.floor(Math.random() * Math.floor(max)) + min;
+
+this.max = (values) => Math.max(...values)
+this.min = (values) => Math.min(...values)
