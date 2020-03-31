@@ -3,7 +3,7 @@
 # TodoList
 todo list application on Electron.js
 
-[![TodoList screenshot](screenshots/screenshot.png)]
+![TodoList screenshot](screenshots/screenshot.png)
 
 ## Setup
 ```
