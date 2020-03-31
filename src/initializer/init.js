@@ -2,7 +2,7 @@ const init = (url) => {
   $.getScript(url);
 }
 
-// initializer -> router -> view -> components <-> interactor
+// initializer -> presentor( router -> view -> (decorator) -> components <-> interactor )
 
 const scripts = [
   //render engine
@@ -41,6 +41,7 @@ const scripts = [
 
   //decorators
   'decorators/chartsEngine',
+  'decorators/decorator',
 
   //presentor
   'presentor/presentor',

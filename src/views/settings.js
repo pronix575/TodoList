@@ -45,6 +45,14 @@ const settings = new View(
 
       </div>
 
+      <div class="settings-container">
+        <div class="flex">
+          <h3>Info</h3>
+
+          <div style="" class="flex"><span style="color: #868686" class="flex"><span>version 1.0.0</span> <span style="font-weight: normal; border: 1px solid var(--main-block-background); padding: 3px 5px; font-size: 9px; margin: 0 0 0 5px; border-radius: 4px">Beta</span></span></div>
+        </div>
+      </div>
+
     </div>
   </div>
   `,

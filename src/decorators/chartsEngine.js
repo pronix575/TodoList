@@ -15,7 +15,7 @@ class ChartsEngine {
     renderChart() {
         const canvas = document.getElementById(this.id),
             ctx = canvas.getContext('2d'),
-            start = 80,
+            start = 40,
             startY = 35,
             props = {
                 "height": canvas.height,
@@ -29,7 +29,7 @@ class ChartsEngine {
 
         console.log(min_of_values)
 
-        gradient.addColorStop(0, applicationState.settings.backgroundColor.color)
+        gradient.addColorStop(0, applicationState.settings.backgroundColor.color + '99')
         gradient.addColorStop(1, "rgb(0,0,0,.0)");
 
         ctx.fillStyle = gradient;
@@ -76,6 +76,7 @@ class ChartsEngine {
         ctx.stroke();
 
     }
+
     renderValueLines() {
         const canvas = document.getElementById(this.id),
             ctx = canvas.getContext('2d'),
@@ -86,22 +87,23 @@ class ChartsEngine {
             startY = 35,
             amountOfLines = 4;
 
-        function getLineValues(amountOfLines, values, max, min) {
+        const getLineValues = (amountOfLines, values, max, min) => {
             var values = [],
                 currentValue = max,
                 step = ((currentValue - min) / amountOfLines).toFixed(2);
 
             for (let i = 0; i < amountOfLines; i++) {
-                values.push(currentValue.toFixed(2));
+                values.push(currentValue.toFixed(0));
                 currentValue -= step;
             }
 
             return values
         }
+
         var lineValues = getLineValues(amountOfLines, this.values, max(this.values), min(this.values));
 
         ctx.strokeStyle = 'white';
-        ctx.lineWidth = 0.4;
+        ctx.lineWidth = 0.8;
 
         ctx.fillStyle = "rgb(255,255,255,0.8)";
         ctx.font = "20px Product Sans";
@@ -119,9 +121,11 @@ class ChartsEngine {
             allWay += step;
         }
     }
+    
     renderDateTime() {
         
     }
+
     render() {
         this.renderValueLines();
         this.renderChart();
